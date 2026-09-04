@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project-specific ---
+
+# macOS finder metadata
+.DS_Store
+**/.DS_Store
+
+# JetBrains IDEs (the template above leaves this commented out)
+.idea/
+
+# Model artifacts: large, binary and fully regenerable from the pipeline.
+# A single ONNX export is 370-490 MB, above GitHub's 100 MB per-file limit.
+models/*
+!models/README.md

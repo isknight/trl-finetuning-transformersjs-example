@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carnivorous Plant Care Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Carnivorous Plant Care Bot</h1>
+      <p class="subtitle">SmolLM2-360M fine-tuned, running entirely in your browser</p>
+    </div>
+    <span id="backend-badge" class="badge badge-pending">starting&hellip;</span>
+  </header>
+
+  <div id="loading" class="loading">
+    <p id="loading-label">Preparing model&hellip;</p>
+    <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+    <p id="loading-detail" class="loading-detail"></p>
+  </div>
+
+  <main id="transcript" class="transcript" aria-live="polite"></main>
+
+  <form id="composer" class="composer">
+    <input
+      id="input"
+      type="text"
+      autocomplete="off"
+      placeholder="Loading model&hellip;"
+      disabled>
+    <button id="send" type="submit" disabled>Send</button>
+    <button id="clear" type="button" class="secondary" disabled>Clear</button>
+  </form>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

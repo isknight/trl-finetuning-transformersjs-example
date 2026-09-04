@@ -1,0 +1,19 @@
+# Training (PyTorch stack)
+torch>=2.4
+transformers>=4.45
+trl>=0.12
+peft>=0.13
+datasets>=3.0
+accelerate>=1.0
+
+# ONNX export for Transformers.js
+optimum[onnxruntime]>=1.23
+onnx>=1.17
+onnxruntime>=1.19
+onnx-ir>=1.0  # required by onnxruntime's 4-bit MatMul quantizer
+
+# Tests (`make test`) - core suite needs nothing heavier than this
+pytest>=8.0
+
+# Optional: live loss dashboard for `make train ... --track`. `make plot` needs nothing.
+# trackio
